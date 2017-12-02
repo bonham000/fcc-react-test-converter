@@ -4,6 +4,7 @@ document.addEventListener('keydown', ({ metaKey, which }) => {
 	if (metaKey && which === 13) convert();
 });
 
+// Confirmation (or Failure) Message
 const confirmation = (message) => {
 	document.getElementById("success").innerHTML = message;
 };
@@ -21,7 +22,10 @@ const convert = () => {
 		return;
 	}
 	
-	const convertedTest = test.replace(/\n/g, '; ');
+	const convertedTest = test
+		.replace(/\n/g, '; ') // multi-line string to single-line
+		.replace(/\s\s+/g, ' ') // replace multiple spaces
+		.replace(/\;\;+/g, ';'); // replace multiple semicolons
 	const convertedMessage = `message: ${message}`;
 
 	const result = `assert((function() { ${convertedTest} })(), '${convertedMessage}');`;
