@@ -20,17 +20,18 @@ const convert = () => {
 		confirmation("Failed! Empty input!");
 		return;
 	}
+	
+	const convertedTest = test.replace(/\n/g, '; ');
+	const convertedMessage = `message: ${message}`;
 
-	const result = `
-		assert((function() {
-			${test}
-		})(), ${message});
-	`;
+	const result = `assert((function() { ${convertedTest} })(), '${convertedMessage}');`;
 
 	document.getElementById("dummy").value = result;
-	document.querySelector("#dummy").select();
+	const copyText = document.querySelector("#dummy");
+	copyText.select();
 	document.execCommand("Copy");
 	confirmation("Copied to clipboard!");
+	console.log(result);
 
 	testField.value = '';
 	messageField.value = '';

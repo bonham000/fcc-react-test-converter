@@ -11,7 +11,9 @@
 
 	<textarea
   id="test"
-  placeholder="mockedComponent.setState({display: false});
+  placeholder="(example):
+  
+mockedComponent.setState({display: false});
 return 
 mockedComponent.find('div').length === 1 &&
 mockedComponent.find('button').length === 1 &&
@@ -22,12 +24,14 @@ mockedComponent.find('h1').length === 0"
 
 	<textarea
   id="message"
-  placeholder="When display is set to false, only a div and button should render."  
+  placeholder="(example):
+  
+When display is set to false, only a div and button should render."  
   ></textarea>
 
   <br>
 	<button onClick="convert()">Convert It! (Cmd + Enter)</button>
-	<input id="dummy" />
+	<input id="dummy" placeholder="converted output shown here"/>
 	<h1 id="success"></h1>
 
   <script src="script.js"></script>

@@ -18,6 +18,12 @@ textarea {
 	background: #E6E6FA;
 }
 
+textarea::-webkit-input-placeholder {
+  color: rgb(105,105,105);
+	font-style: italic;
+	font-size: 16px;
+}
+
 button {
 	position: absolute;
 	right: 35px;
@@ -38,5 +44,6 @@ button {
 }
 
 #dummy {
-	display: none;
+	margin-top: 3px;
+	width: 63vw;
 }
