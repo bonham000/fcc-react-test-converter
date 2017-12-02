@@ -6,13 +6,30 @@
 </head>
 
 <body>
-	<h3>Test and Assertion Statement</h3>
-	<textarea id="test"></textarea><br>
+
+	<h3>Test and Assertion Statement:</h3>
+
+	<textarea
+  id="test"
+  placeholder="mockedComponent.setState({display: false});
+return 
+mockedComponent.find('div').length === 1 &&
+mockedComponent.find('button').length === 1 &&
+mockedComponent.find('h1').length === 0"
+  ></textarea><br>
+
 	<h3>Test Message:</h3>
-	<textarea id="message"></textarea><br>
-	<button onClick="convert()">Do It!</button>
+
+	<textarea
+  id="message"
+  placeholder="When display is set to false, only a div and button should render."  
+  ></textarea>
+
+  <br>
+	<button onClick="convert()">Convert It! (Cmd + Enter)</button>
 	<input id="dummy" />
 	<h1 id="success"></h1>
+
   <script src="script.js"></script>
 </body>
 </html>

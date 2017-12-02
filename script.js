@@ -27,11 +27,10 @@ const convert = () => {
 		})(), ${message});
 	`;
 
-
 	document.getElementById("dummy").value = result;
 	document.querySelector("#dummy").select();
 	document.execCommand("Copy");
-	confirmation("Success! Copied to clipboard! Rock on!");
+	confirmation("Copied to clipboard!");
 
 	testField.value = '';
 	messageField.value = '';
